@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage One Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="contained">
+    <h1 data-testid="slackUserName">Josephdon</h1>
+    <div class="img">
+        <img src="./img/Picture.jpg" alt="Josephdon" data-testid="slackDisplayImage">
+    </div>
+    
+    
+    <section class="container">
+        <section class="date">
+            <div data-testid="currentDayOfTheWeek" id="weekdays"></div>
+            <div data-testid="currentUTCTime" id="utctime"></div>
+        </section>
+        <section class="track">
+            <div data-testid="myTrack">Frontend</div>
+            <div data-testid=“githubURL”><a href="http://" target="_blank" rel="noopener noreferrer">Github Repo</a></div>
+        </section>
+
+    </section> 
+    </section>
+
+    <script>
+        const date = new Date();
+        document.getElementById("utctime").innerHTML = date.getMilliseconds()
+
+        let day = date.getDay()
+        let ndate = date.toLocaleString();
+
+        switch (day) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        
+        document.getElementById("weekdays").innerHTML = day
+    </script>
+
+</body>
+</html>

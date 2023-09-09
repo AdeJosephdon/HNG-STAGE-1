@@ -1,0 +1,92 @@
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--BORDER-RADIUS);
+}
+
+button{
+    font: inherit;
+}
+
+/* VARIABLES */
+:root {
+    /* COLORS */
+    --BGCOLOR-FADE: #661afe;
+    --BGCOLOR: #35b6ea;
+    --BGIMAGE: linear-gradient(to right, var(--BGCOLOR-FADE), var(--BGCOLOR));
+    --INBGCOLOR: rgb(131, 94, 211);
+    /* STANDARD MARGIN */
+    --MARGIN-TB: 10px;
+
+    /* Border Radius */
+    --BORDER-RADIUS: 20px;
+
+    /* HEIGHT */
+    --HEIGHT: 400px;
+
+}
+
+html {
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+    font-family: 'Rancho', cursive;
+    font-size: 25px;
+    /* Note: That font size reduces the reference "rem size" for fonts */
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,.container{
+    text-align: center;
+}
+
+h1{
+    background-color: var(--INBGCOLOR);
+    padding: 10px;
+    border: var(--INBGCOLOR) solid;
+    border-radius: var(--BORDER-RADIUS);
+    margin: var(--MARGIN-TB) 0;
+    font-size: 40px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .date,.track {
+    width: 45%;
+    height: 70px;
+    background-color: var(--INBGCOLOR);
+    padding: 10px;
+    border-radius: var(--BORDER-RADIUS);
+}
+
+a {
+    text-decoration: none;
+}
+a:hover,a:active {
+    color: red
+}
